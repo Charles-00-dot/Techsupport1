@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.HashMap;
 
 /**
  * The responder class represents a response generator object.
@@ -12,7 +13,7 @@ public class Responder
 {
     private ArrayList<String> responses;
     private Random rand_gen;
-    
+    private HashMap<String,String> responsesMap;
     
     
     
@@ -23,6 +24,7 @@ public class Responder
     {
         rand_gen = new Random();
         responses = new ArrayList<>();
+        responsesMap = new HashMap<>();
         fillResponses();
         
     }
@@ -45,4 +47,21 @@ public class Responder
         responses.add("who knows, you might have a chance");
         
     }
+    
+    private void fillResponsesMap(){
+        responsesMap.put("lol", "get good");
+        responsesMap.put("GG"," well played");
+        responsesMap.put("Chicken"," Dinner");
+}
+
+public String generateResponse(String word){
+    String answer = responsesMap.get(word);
+    if (answer==null){
+        answer= pickDefaultResponse();
+    }
+    return answer;
+}
+public String pickDefaultResponse(){
+    return "default";
+}
 }

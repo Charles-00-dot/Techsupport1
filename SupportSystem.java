@@ -30,6 +30,7 @@ public class SupportSystem
      *15.
      * 23. yes because when we used .size in the method, it will go through 
      * every single index even when the ArrayList is updated.
+     * 24. provides constant-time performance for the basic operations (get and put)
      * 
      * 
      * 
@@ -72,7 +73,7 @@ public class SupportSystem
                 finished = true;
             }
             else {
-                String response = responder.generateResponse();
+                String response = responder.generateResponse(input);
                 System.out.println(response);
             }
         }
