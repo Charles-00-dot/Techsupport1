@@ -13,16 +13,31 @@
  */
 public class SupportSystem
 {
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    /*
+     * 2. 
+     * 3.The other one has an int offset parameter and the other doesn't.
+     *4.endsWith(String suffix) 
+     *5.length()
+     *6.Because they are aligned in the String class documentation
+     *7.Return a string, with all leading and training space removed.
+     *8.
+     *9.
+     *10.boolean
+     *11.startsWith change to equals
+     *12.It is in the java.util package;
+     *13.The random numbers will return from 0-99
+     *
+     *15.
+     * 23. yes because when we used .size in the method, it will go through 
+     * every single index even when the ArrayList is updated.
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     * 
+     */
     
     
     private InputReader reader;
@@ -49,9 +64,11 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String input = reader.getInput();
+            String input = reader.getInput(); // ksgduaybye
+            input = input.trim();// #8 b y e 
+            input = input.toLowerCase(); // #9 BYE
 
-            if(input.startsWith("bye")) {
+            if(input.equals("bye")) {
                 finished = true;
             }
             else {
