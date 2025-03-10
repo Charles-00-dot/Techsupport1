@@ -2,6 +2,29 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 /**
+ * 40.Arrays.asList(wordArrays) is a static method from the Arrays class. 
+ * The method asList converts an array into a List. It's a class method, so you can call it directly on the class without needing to create an instance of Arrays. The method asList is used in your code to convert the array wordArrays into a List, which is then used to initialize the HashSet called words.
+ * 41.Arrays.binarySearch():
+ * Arrays.deepEquals():
+ * Arrays.hashCode()
+ * 
+ * 42.
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
  * InputReader reads typed text input from the standard text terminal. 
  * The text typed by a user is returned.
  * 
@@ -26,11 +49,19 @@ public class InputReader
      *
      * @return  A String typed by the user.
      */
-    public String getInput()
+    public HashSet<String> getInput()
     {
         System.out.print("> ");         // print prompt
-        String inputLine = reader.nextLine();
+        String inputLine = reader.nextLine().trim().toLowerCase();
+        String[] wordArray = inputLine.split(" ");
+        
+        HashSet<String> words = new HashSet<String>();
+        for(String word : wordArray) {
+            words.add(word);
+        }
 
-        return inputLine;
+        return words;
     }
+    
+    
 }
